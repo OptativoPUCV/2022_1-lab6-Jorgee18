@@ -75,10 +75,10 @@ int is_valid(Node* n)
     }
   }
   
-  int h;
+  int h,k,p;
   for(h = 0; h < 9; h++)
   {
-    int k=h,p;
+    k = h;
     ptr = (int*) calloc(10, sizeof(int));
     for(p = 0; p < 9; p++)
       {
@@ -95,7 +95,6 @@ int is_valid(Node* n)
         }
       }
   }
-   
   return 1;
 }
 
