@@ -45,8 +45,17 @@ void print_node(Node* n){
 
 int is_valid(Node* n)
 {
+  int i, j, k;
+  int *ptr = (int*) calloc(10, sizeof(int));
   
-
+  for(i = 0; i < 9; i++)
+  {
+    if(n->sudo[i][0] != 0)
+    {
+      ptr[i] = ptr[i] + 1;
+      if(ptr[i] > 1) return 0;
+    }
+  }
   return 1;
 }
 
@@ -78,8 +87,10 @@ List* get_adj_nodes(Node* n){
 }
 
 
-int is_final(Node* n){
-    return 0;
+int is_final(Node* n)
+{
+  
+  return 0;
 }
 
 Node* DFS(Node* initial, int* cont){
