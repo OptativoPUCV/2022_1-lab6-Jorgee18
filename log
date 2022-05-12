@@ -132,3 +132,15 @@ sudoku.c:156:5: note: previous definition of ‘main’ was here
      ^~~~
 Compilation failed
 756b193
+Thu May 12 23:26:07 UTC 2022: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+test.c:245:5: error: redefinition of ‘main’
+ int main( int argc, char *argv[] ) {
+     ^~~~
+In file included from test.c:5:0:
+sudoku.c:156:5: note: previous definition of ‘main’ was here
+ int main( int argc, char *argv[] ){
+     ^~~~
+Compilation failed
+d3154f6
