@@ -94,6 +94,7 @@ int is_valid(Node* n)
           } 
         }
       }
+    free(ptr);
   }
   return 1;
 }
