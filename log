@@ -30,3 +30,16 @@ Thu May 12 15:53:08 UTC 2022:
  tests:  0|5
 total_score: 0/70
 056616f
+Thu May 12 15:55:36 UTC 2022: 
+ sudoku.c | 2 ++
+ 1 file changed, 2 insertions(+)
+In file included from test.c:5:0:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:59:8: error: redefinition of ‘ptr’
+   int *ptr = (int*) calloc(10, sizeof(int));
+        ^~~
+sudoku.c:49:8: note: previous definition of ‘ptr’ was here
+   int *ptr = (int*) calloc(10, sizeof(int));
+        ^~~
+Compilation failed
+98556f1

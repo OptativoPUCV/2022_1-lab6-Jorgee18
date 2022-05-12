@@ -56,6 +56,8 @@ int is_valid(Node* n)
       if(ptr[i] > 1) return 0;
     }
   }
+  int *ptr = (int*) calloc(10, sizeof(int));
+  
   for(j = 0; j < 9; j++)
   {
     if(n->sudo[0][j] != 0)
