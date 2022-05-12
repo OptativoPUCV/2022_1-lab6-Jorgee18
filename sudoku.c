@@ -129,8 +129,20 @@ List* get_adj_nodes(Node* n){
 
 int is_final(Node* n)
 {
-  
-  
+  int h,k,p;
+  for(h = 0; h < 9; h++)
+  {
+    k = h;
+    for(p = 0; p < 9; p++)
+      {
+        int i=3*(k/3) + (p/3) ;
+        int j=3*(k%3) + (p%3) ;
+        if(n->sudo[i][j] != 0)
+        {
+          return 1;
+        }
+      }
+  }
   return 0;
 }
 
