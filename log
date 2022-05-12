@@ -43,3 +43,9 @@ sudoku.c:49:8: note: previous definition of ‘ptr’ was here
         ^~~
 Compilation failed
 98556f1
+Thu May 12 15:56:54 UTC 2022: 
+ sudoku.c | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+ tests:  2|4
+total_score: 15/70
+4e2281f

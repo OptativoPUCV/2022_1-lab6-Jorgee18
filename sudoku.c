@@ -53,11 +53,15 @@ int is_valid(Node* n)
     if(n->sudo[i][0] != 0)
     {
       ptr[i] = ptr[i] + 1;
-      if(ptr[i] > 1) return 0;
+      if(ptr[i] > 1) 
+      {
+        free(ptr);
+        return 0;
+      }
     }
   }
-  int *ptr = (int*) calloc(10, sizeof(int));
   
+  ptr = (int*) calloc(10, sizeof(int));
   for(j = 0; j < 9; j++)
   {
     if(n->sudo[0][j] != 0)
@@ -66,6 +70,7 @@ int is_valid(Node* n)
       if(ptr[j] > 1) return 0;
     }
   }
+  
   int k=4,p; 
   for(p=0;p<9;p++){
   int i=3*(k/3) + (p/3) ;
