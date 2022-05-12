@@ -45,15 +45,15 @@ void print_node(Node* n){
 
 int is_valid(Node* n)
 {
-  int i, j;
+  int a, s;
   int *ptr = (int*) calloc(10, sizeof(int));
   
-  for(i = 0; i < 9; i++)
+  for(a = 0; a < 9; a++)
   {
-    if(n->sudo[i][0] != 0)
+    if(n->sudo[a][0] != 0)
     {
-      ptr[i] = ptr[i] + 1;
-      if(ptr[i] > 1) 
+      ptr[a] = ptr[a] + 1;
+      if(ptr[a] > 1) 
       {
         free(ptr);
         return 0;
@@ -62,12 +62,12 @@ int is_valid(Node* n)
   }
   
   ptr = (int*) calloc(10, sizeof(int));
-  for(j = 0; j < 9; j++)
+  for(s = 0; s < 9; s++)
   {
-    if(n->sudo[0][j] != 0)
+    if(n->sudo[0][s] != 0)
     {
-      ptr[j] = ptr[j] + 1;
-      if(ptr[j] > 1)
+      ptr[s] = ptr[s] + 1;
+      if(ptr[s] > 1)
       { 
         free(ptr);
         return 0;
