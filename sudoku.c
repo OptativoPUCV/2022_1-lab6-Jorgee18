@@ -74,6 +74,7 @@ int is_valid(Node* n)
       }
     }
   }
+  /*
   int h;
   for(h = 0; h < 9; h++)
   {
@@ -93,7 +94,7 @@ int is_valid(Node* n)
           } 
         }
       }
-  }
+  }*/
   return 1;
 }
 
