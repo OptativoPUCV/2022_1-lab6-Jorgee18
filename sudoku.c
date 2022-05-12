@@ -137,13 +137,14 @@ int is_final(Node* n)
       {
         int i=3*(k/3) + (p/3) ;
         int j=3*(k%3) + (p%3) ;
-        if(n->sudo[i][j] != 0)
+        
+        if(n->sudo[i][j] == 0)
         {
-          return 1;
+          return 0;
         }
       }
   }
-  return 0;
+  return 1;
 }
 
 Node* DFS(Node* initial, int* cont)
