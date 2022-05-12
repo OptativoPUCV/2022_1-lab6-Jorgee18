@@ -76,7 +76,7 @@ int is_valid(Node* n)
   }
   
   int h,k,p;
-  for(h = 0; h < 3; h++)
+  for(h = 0; h < 9; h++)
   {
     k = h;
     ptr = (int*) calloc(10, sizeof(int));
@@ -84,7 +84,7 @@ int is_valid(Node* n)
       {
         int i=3*(k/3) + (p/3) ;
         int j=3*(k%3) + (p%3) ;
-        if(n->sudo[i][j] != 0)
+        if(n->sudo[p][j] != 0)
         {
           ptr[p] = ptr[p] + 1;
           if(ptr[p] > 1)
@@ -146,7 +146,9 @@ int is_final(Node* n)
   return 0;
 }
 
-Node* DFS(Node* initial, int* cont){
+Node* DFS(Node* initial, int* cont)
+{
+  
   return NULL;
 }
 
