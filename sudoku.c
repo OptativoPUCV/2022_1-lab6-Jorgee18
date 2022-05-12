@@ -74,27 +74,28 @@ int is_valid(Node* n)
       }
     }
   }
-  /*
+  
   int h;
   for(h = 0; h < 9; h++)
   {
     int k=h,p;
+    ptr = (int*) calloc(10, sizeof(int));
     for(p = 0; p < 9;)
       {
         int i=3*(k/3) + (p/3) ;
         int j=3*(k%3) + (p%3) ;
-        ptr = (int*) calloc(10, sizeof(int));
         if(n->sudo[i][j] != 0)
         {
-          ptr[j] = ptr[j] + 1;
-          if(ptr[j] > 1)
+          ptr[p] = ptr[p] + 1;
+          if(ptr[p] > 1)
           { 
             free(ptr);
             return 0;
           } 
         }
       }
-  }*/
+  }
+   
   return 1;
 }
 
