@@ -89,6 +89,7 @@ int is_valid(Node* n)
           ptr[p] = ptr[p] + 1;
           if(ptr[p] > 1)
           { 
+            free(ptr);
             return 0;
           } 
         }
