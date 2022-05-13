@@ -173,7 +173,7 @@ Node* DFS(Node* initial, int* cont)
     while(!is_empty(adj))
       {
         Node *ptrAux;
-        ptrAux = first(adj);
+        ptrAux = last(adj);
         pop(adj);
         push(pila, ptrAux);
         
