@@ -50,7 +50,7 @@ int is_valid(Node* n)
   
   for(a = 0; a < 9; a++)
   {
-    ptr = (int*) calloc(10, sizeof(int);
+    ptr = (int*) calloc(10, sizeof(int));
     for(b = 0; b < 9; b++)
     {
       if(n->sudo[n->sudo[a][b]][0] != 0)
