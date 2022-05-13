@@ -162,23 +162,22 @@ Node* DFS(Node* initial, int* cont)
   Node *aux;
   push(pila, initial);
 
-  while(is_empty(pila) != 1)
+  while(!is_empty(pila))
   {
-    aux = first(pila);
+    aux = top(pila);
     pop(pila);
     
     if(is_final(aux) == 1) return aux;
     List *adj = get_adj_nodes(aux);
     
-    while(is_empty(adj) != 1)
+    while(!is_empty(adj))
       {
         Node *ptrAux;
         ptrAux = first(adj);
         pop(adj);
         push(pila, ptrAux);
-        break;
+        
       }
-    break;
   }
   return NULL;
 }
