@@ -60,6 +60,7 @@ int is_valid(Node* n)
       }
     }
   }
+  free(ptr);
   
   ptr = (int*) calloc(10, sizeof(int));
   for(s = 0; s < 9; s++)
@@ -74,7 +75,8 @@ int is_valid(Node* n)
       }
     }
   }
-  
+
+  free(ptr);
   int h,k,p;
   for(h = 0; h < 9; h++)
   {
@@ -148,12 +150,12 @@ int is_final(Node* n)
 }
 
 Node* DFS(Node* initial, int* cont)
-{
+{/*
   Stack *pila = createStack();
   Node *aux = createNode();
   push(pila, initial);
 
-  while(next(pila) != NULL)
+  while(first(pila) != NULL)
   {
     aux = first(pila);
     pop(pila);
@@ -168,7 +170,7 @@ Node* DFS(Node* initial, int* cont)
         ptrAux = next(adj);
       }
     free(ptrAux);
-  }
+  }*/
   return NULL;
 }
 
