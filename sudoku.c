@@ -45,18 +45,21 @@ void print_node(Node* n){
 
 int is_valid(Node* n)
 {
-  int a, s;
+  int a, s, b, l;
   int *ptr = (int*) calloc(10, sizeof(int));
   
   for(a = 0; a < 9; a++)
   {
-    if(n->sudo[a][0] != 0)
+    for(b = 0; b < 9; b++)
     {
-      ptr[a] = ptr[a] + 1;
-      if(ptr[a] > 1) 
+      if(n->sudo[n->sudo[a][b]][0] != 0)
       {
-        free(ptr);
-        return 0;
+        ptr[n->sudo[a][b]] = ptr[n->sudo[a][b]] + 1;
+        if(ptr[n->sudo[a][b]] > 1) 
+        {
+          free(ptr);
+          return 0;
+        }
       }
     }
   }
@@ -65,13 +68,16 @@ int is_valid(Node* n)
   ptr = (int*) calloc(10, sizeof(int));
   for(s = 0; s < 9; s++)
   {
-    if(n->sudo[0][s] != 0)
+    for(l = 0; l < 9; l++)
     {
-      ptr[s] = ptr[s] + 1;
-      if(ptr[s] > 1)
-      { 
-        free(ptr);
-        return 0;
+      if(n->sudo[l][s] != 0)
+      {
+        ptr[n->sudo[l][s]] = ptr[n->sudo[l][s]] + 1;
+        if(ptr[n->sudo[l][s]] > 1)
+        { 
+          free(ptr);
+          return 0;
+        }
       }
     }
   }
@@ -88,8 +94,8 @@ int is_valid(Node* n)
         int j=3*(k%3) + (p%3) ;
         if(n->sudo[i][j] != 0)
         {
-          ptr[p] = ptr[p] + 1;
-          if(ptr[p] > 1)
+          ptr[n->sudo[i][j]] = ptr[n->sudo[i][j]] + 1;
+          if(ptr[n->sudo[i][j]] > 1)
           { 
             free(ptr);
             return 0;
