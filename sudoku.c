@@ -50,6 +50,7 @@ int is_valid(Node* n)
   
   for(a = 0; a < 9; a++)
   {
+    ptr = (int*) calloc(10, sizeof(int);
     for(b = 0; b < 9; b++)
     {
       if(n->sudo[n->sudo[a][b]][0] != 0)
@@ -62,12 +63,12 @@ int is_valid(Node* n)
         }
       }
     }
+    free(ptr);
   }
-  free(ptr);
   
-  ptr = (int*) calloc(10, sizeof(int));
   for(s = 0; s < 9; s++)
   {
+    ptr = (int*) calloc(10, sizeof(int));
     for(l = 0; l < 9; l++)
     {
       if(n->sudo[l][s] != 0)
@@ -102,7 +103,6 @@ int is_valid(Node* n)
           } 
         }
       }
-    free(ptr);
   }
   return 1;
 }
