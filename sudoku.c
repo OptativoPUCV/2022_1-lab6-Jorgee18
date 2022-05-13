@@ -153,12 +153,12 @@ Node* DFS(Node* initial, int* cont)
   Node *aux = createNode();
   push(pila, initial);
 
-  while(pila != NULL)
+  while(size(pila) != 0)
   {
     aux = first(pila);
     pop(pila);
     
-    if(is_final(aux) == 1)return aux;
+    if(is_final(aux) == 1) return aux;
     List *adj = get_adj_nodes(aux);
     Node *ptrAux = first(adj);
     

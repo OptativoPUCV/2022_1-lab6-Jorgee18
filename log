@@ -195,3 +195,14 @@ Fri May 13 00:13:44 UTC 2022:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 5a0e3d0
+Fri May 13 00:17:49 UTC 2022: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘DFS’:
+sudoku.c:156:9: error: implicit declaration of function ‘size’ [-Werror=implicit-function-declaration]
+   while(size(pila) != 0)
+         ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+708df28
