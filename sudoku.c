@@ -153,7 +153,7 @@ Node* DFS(Node* initial, int* cont)
   Node *aux = createNode();
   push(pila, initial);
 
-  while(size(pila) != 0)
+  while(next(pila) != NULL)
   {
     aux = first(pila);
     pop(pila);

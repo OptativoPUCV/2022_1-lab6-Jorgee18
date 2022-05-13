@@ -206,3 +206,9 @@ sudoku.c:156:9: error: implicit declaration of function ‘size’ [-Werror=impl
 cc1: all warnings being treated as errors
 Compilation failed
 708df28
+Fri May 13 00:18:36 UTC 2022: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  3|3
+total_score: 25/70
+8d1810f
