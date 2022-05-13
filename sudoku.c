@@ -178,6 +178,7 @@ Node* DFS(Node* initial, int* cont)
         push(pila, ptrAux);
         break;
       }
+    break;
   }
   return NULL;
 }
