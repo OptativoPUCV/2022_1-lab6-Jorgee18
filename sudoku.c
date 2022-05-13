@@ -53,7 +53,7 @@ int is_valid(Node* n)
     ptr = (int*) calloc(10, sizeof(int));
     for(b = 0; b < 9; b++)
     {
-      if(n->sudo[n->sudo[a][b]][0] != 0)
+      if(n->sudo[n->sudo[a][b]] != 0)
       {
         ptr[n->sudo[a][b]] = ptr[n->sudo[a][b]] + 1;
         if(ptr[n->sudo[a][b]] > 1) 
